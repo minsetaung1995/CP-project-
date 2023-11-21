@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pitcher Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Predict Whether a Pitcher Will Throw a Complete Game or Shutout</h1>
+    <form method="POST" action="/predict">
+        <label for="input_features">Enter Pitcher Data:</label>
+        <input type="text" id="input_features" name="input_features" placeholder="year,average_age,runs_per_game,...">
+        <button type="submit">Predict</button>
+    </form>
+    <h2>Prediction Result: {{ prediction_result }}</h2>
+</body>
+</html>
